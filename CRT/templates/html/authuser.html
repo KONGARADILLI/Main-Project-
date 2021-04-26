@@ -1,0 +1,12 @@
+{% extends 'html/base.html' %}
+{% block title %} Login {% endblock %}
+{% block content %}
+<div class = "container">
+ 	<div class = "card col-md-6 mx-auto mt-5 shadow-lg">
+ 		<h3 class="text-center bg-info p-2 my-2 border rounded">Register / Login</h3>
+ 		<div class="card-body">
+ 	 <a href="{% url 'rg' %}"><h5 class="text-center text-white bg-dark p-2 my-2 border rounded">Student</h5></a>
+ 	  <a href="{% url 'rg' %}"><h5 class="text-center text-white bg-dark p-2 my-2 border rounded">Admin</h5></a>
+ 	</div>
+ </div>
+{% endblock %}

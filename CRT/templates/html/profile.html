@@ -1,0 +1,36 @@
+{% extends 'html/base.html' %}
+{% block title %}Profile {% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row">
+	<div class="col-md-4 h-20 mt-4 card shadow-lg">
+		<h3 class="p-2 bg-secondary text-center text-light border rounded my-2">Info</h3>
+		<img src="{{user.improfile.impf.url}}" height=230px width=100%>
+		<div class="card-body">
+			<h4>Hi {{user.username}}</h4>
+			<div class="row">
+				<div class="col">
+					<a href="{% url 'dash' %}" class="form-control btn btn-info">Back</a>
+				</div>
+				<div class="col">
+					<a href="{% url 'update' %}" class="form-control btn btn-info">Update</a>
+				</div>	
+			</div>
+		</div>
+	</div>
+	<div class="col-md-4 mt-4 card shadow-lg">
+		<h3 class="p-2 bg-secondary text-center text-light border rounded my-2">User Details</h3>
+		<table>
+			<tr>
+				<th>Username</th>
+				<th>{{user.username}}</th>
+			</tr>
+			<tr>
+				<th>Age</th>
+				<th>{{user.improfile.age}}</th>
+			</tr>
+		</table>
+	</div>
+</div>
+</div>
+{% endblock %}
